@@ -9,6 +9,10 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
+    - name: Instalar AppArmor
+      run: |
+        sudo apt-get update
+        sudo apt-get install apparmor apparmor-utils
     - name: Instalar dependencias
       run: |
         python -m venv venv
